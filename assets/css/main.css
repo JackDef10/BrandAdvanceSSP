@@ -17,7 +17,9 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	scroll-behavior: smooth;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -66,6 +68,16 @@ input, select, textarea {
 	appearance: none;
 }
 
+span{
+	color:rgb(237 185 46);
+	font-weight: 300;
+	font-style: italic;
+}
+
+#white-h2{
+	color: white;
+	font-weight: 700;
+}
 /* Basic */
 
 	@-ms-viewport {
@@ -130,8 +142,8 @@ input, select, textarea {
 		}
 
 	body {
-		background-color: #24242a;
-		color: rgba(255, 255, 255, 0.5);
+		background-color: #ffffff;
+		color: rgb(0, 0, 0);
 	}
 
 	body, input, select, textarea {
@@ -181,7 +193,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #ffffff;
+		color: #000000;
 		font-weight: 700;
 		line-height: 1.5;
 		margin: 0 0 2.0625rem 0;
@@ -198,7 +210,7 @@ input, select, textarea {
 	}
 
 	h2 {
-		font-size: 1.90rem;
+		font-size: 2.55rem;
 		line-height: 1;
 	}
 
@@ -1788,10 +1800,29 @@ input, select, textarea {
 /* Box */
 
 	.box {
-		background: #2e2e35;
+		background: whitesmoke;
 		border-radius: 7px;
 		margin-bottom: 2.75rem;
 		padding: 1.5rem;
+	}
+
+	.sub-box {
+		background: transparent;
+		border-radius: 7px;
+		margin-bottom: 2.75rem;
+		padding: 1.5rem;
+	}
+
+	.sub-box.cta {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		padding: 6rem;
+	}
+
+	.sub-box > :last-child {
+		margin-bottom: 0;
 	}
 
 		.box > :last-child {
@@ -1805,6 +1836,7 @@ input, select, textarea {
 			display: flex;
 			padding: 4rem;
 		}
+
 
 			.box.cta .content {
 				width: 65%;
@@ -2191,7 +2223,7 @@ input, select, textarea {
 		background-color: transparent;
 		border-radius: 7px;
 		border: none;
-		border: solid 2px rgba(110, 110, 122, 0.5);
+		border: solid 2px rgb(237 185 46);
 		color: #ffffff;
 		color: inherit;
 		display: block;
@@ -2348,26 +2380,38 @@ input, select, textarea {
 		border-radius: 100%;
 	}
 
+	.sub-form ::-webkit-input-placeholder {
+		color: white !important;
+	}
+
 	::-webkit-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgb(0, 0, 0) !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgb(0, 0, 0) !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgb(0, 0, 0) !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
+		color: rgb(0, 0, 0) !important;
 		opacity: 1.0;
 	}
 
+	div.sub-field{
+		margin-right:2em;
+	}
+
+	div.sub-field >input{
+		color: white;
+	}
+	
 /* Icon */
 
 	.icon {
@@ -2413,7 +2457,7 @@ input, select, textarea {
 			display: block;
 			height: 2.75rem;
 			line-height: 2.75rem;
-			margin: 0 auto 2.75rem auto;
+			margin: 0 auto .75rem auto;
 			text-align: center;
 			width: 2.75rem;
 		}
@@ -2749,16 +2793,28 @@ input, select, textarea {
 
 			ul.icons li .icon:before {
 				font-size: 1.75rem;
+				top: 1em;
+    			position: relative;
+			}
+		
+		
+			@media screen and (max-width: 980px) {
+
+				ul.icons li {
+					padding: 0 1.75rem 0 0;
+				}
+	
+					ul.icons li .icon:before {
+						font-size: 1.25rem;
+						right:4em;
+					}
+	
 			}
 
-		@media screen and (max-width: 736px) {
-
-			ul.icons li {
-				padding: 0 2.75rem 0 0;
-			}
+		@media screen and (max-width: 520px) {
 
 				ul.icons li .icon:before {
-					font-size: 1.75rem;
+					display: none;
 				}
 
 		}
@@ -2845,8 +2901,9 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background: #1f1f24;
+			background: #ffffffd5;
 			position: relative;
+			padding-bottom: 0em;
 		}
 
 			.wrapper.style1.top:before {
@@ -3070,11 +3127,15 @@ input, select, textarea {
 			-webkit-align-items: center;
 			-ms-align-items: center;
 			align-items: center;
-			background: #2e2e35;
+			background: whitesmoke;
 			border-radius: 7px;
 			margin-bottom: 4.8125rem;
+			box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.35),
+					-6px -6px 10px -1px rgba(255, 255, 255, 0.6);
 			max-height: 30rem;
 			overflow: hidden;
+			font-size: 1.25em;
+			color: rgb(0, 0, 0);
 		}
 
 			.spotlights .spotlight .image {
@@ -3262,11 +3323,11 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #2e2e35;
+		background: rgb(255, 255, 255);
 		box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.25);
 		color: rgba(255, 255, 255, 0.5);
 		cursor: default;
-		height: 4rem;
+		height: 5.5rem;
 		left: 0;
 		line-height: 4rem;
 		padding: 0 2rem;
@@ -3277,7 +3338,7 @@ input, select, textarea {
 	}
 
 		#header > .logo {
-			color: #ffffff;
+			color: #000000;
 			font-size: 1.25rem;
 			font-weight: 700;
 			height: inherit;
@@ -3291,6 +3352,15 @@ input, select, textarea {
 
 			#header > .logo span {
 				font-weight: 300;
+			}
+
+			#logo {
+			width:9em;
+			height: auto;
+			position: relative;
+			margin: 0 auto;
+			display: inline;
+			top:0.5em;
 			}
 
 		#header .label {
@@ -3323,21 +3393,23 @@ input, select, textarea {
 					}
 
 						#header > nav > ul > li.current a {
-							color: #ffffff;
+							color: #000000;
 							font-weight: 700;
 						}
 
 					#header > nav > ul > li > a {
-						color: rgba(255, 255, 255, 0.5);
+						color: rgb(0, 0, 0);
+						font-weight: 500;
 						overflow: hidden;
 						padding: 0.25rem 0.5rem;
 						position: relative;
 						text-decoration: none;
+						font-size: 1.15em;
 					}
 
 						#header > nav > ul > li > a:hover, #header > nav > ul > li > a:active {
 							border-radius: 7px;
-							color: #ffffff;
+							color: rgb(237 185 46);
 						}
 
 						#header > nav > ul > li > a:before {
@@ -3349,7 +3421,7 @@ input, select, textarea {
 					}
 
 					#header > nav > ul > li.active > a {
-						color: #ffffff;
+						color: rgba(237 185 46);
 					}
 
 		.dropotron {
@@ -3364,6 +3436,16 @@ input, select, textarea {
 			.dropotron.level-0 {
 				margin-top: 1.125rem;
 				margin-left: 0;
+			}
+
+			.dropotron.level-1 {
+				margin-top: 3rem;
+				margin-left: -18em;
+			}
+
+			.dropotron.level-2 {
+				margin-top: .35rem;
+				margin-left: -6em;
 			}
 
 				.dropotron.level-0:before {
@@ -3396,9 +3478,11 @@ input, select, textarea {
 
 			.dropotron a {
 				border: 0;
-				color: rgba(255, 255, 255, 0.75);
+				color: rgb(255, 255, 255);
 				padding: 0.5rem 1rem;
 				text-decoration: none !important;
+				font-weight: 500;
+				font-size:1.25em;
 			}
 
 				.dropotron a:active, .dropotron a:hover, .dropotron a:focus {
@@ -3411,7 +3495,7 @@ input, select, textarea {
 			-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, top 0.2s ease-in-out, right 0.2s ease-in-out;
 			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, top 0.2s ease-in-out, right 0.2s ease-in-out;
 			text-decoration: none;
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(0, 0, 0, 0.5);
 			display: none;
 			height: inherit;
 			line-height: inherit;
@@ -3433,10 +3517,11 @@ input, select, textarea {
 				text-transform: none !important;
 				font-family: 'Font Awesome 5 Free';
 				font-weight: 900;
+				font-size: 2em;
 			}
 
 			#header > .navPanelToggle:hover {
-				color: #ffffff;
+				color: rgb(237 185 46);
 			}
 
 			#header > .navPanelToggle:before {
@@ -3467,6 +3552,11 @@ input, select, textarea {
 
 			#header.alt > .logo {
 				font-size: 1.5rem;
+			}
+
+			.divider{
+				font-size:1.25em;
+				font-weight: 500;
 			}
 
 	@media screen and (max-width: 980px) {
@@ -3654,7 +3744,7 @@ input, select, textarea {
 /* Banner */
 
 	#header + #banner {
-		margin-top: -6rem;
+		margin-top: -7.25rem;
 	}
 
 	#banner.wrapper {
@@ -3676,6 +3766,7 @@ input, select, textarea {
 		transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
 		padding-right: 2.75rem;
 		width: 50%;
+		margin-top: 3rem;
 	}
 
 		#banner .content > :last-child {
@@ -3698,6 +3789,14 @@ input, select, textarea {
 		#banner .image-wrapper .frame {
 			height: auto;
 			width: 100%;
+			margin-top: -4rem;
+		}
+
+		#banner .image-wrapper .frame2 {
+			height: auto;
+			width: 70%;
+			margin-top: 4rem;
+			margin-left: 5rem;
 		}
 
 		#banner .image-wrapper .image {
@@ -3705,8 +3804,9 @@ input, select, textarea {
 			margin: 0 auto;
 			position: absolute;
 			right: 0;
-			top: 1rem;
-			width: 80%;
+			top: -5rem;
+			width: 100%;
+			z-index: -1;
 		}
 
 			#banner .image-wrapper .image img {
@@ -3848,7 +3948,7 @@ input, select, textarea {
 /* Main Wrapper */
 
 	#wrapper section:first-child.wrapper.style1:before {
-		background: #24242a;
+		background: rgb(237 185 46);
 		content: '';
 		height: 19.5rem;
 		left: 0;
@@ -3859,7 +3959,7 @@ input, select, textarea {
 	}
 
 	#wrapper section:last-child.wrapper.style1:before {
-		background: #24242a;
+		background: rgba(237 185 46);
 		bottom: 0;
 		content: '';
 		height: 15rem;
@@ -3871,8 +3971,21 @@ input, select, textarea {
 
 /* Footer */
 
+#showcase2 video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 19.5em;
+	object-fit: cover;
+	z-index: -1;
+	border-radius: .5em;
+}
+
+
 	#footer {
 		text-align: center;
+		padding: 0em;
 	}
 
 		#footer .contact-form {
@@ -3925,12 +4038,12 @@ input, select, textarea {
 				}
 
 				#footer .contact-info .item a {
-					color: rgba(255, 255, 255, 0.5);
+					color: rgba(0, 0, 0, 0.5);
 					text-decoration: none;
 				}
 
 					#footer .contact-info .item a:hover {
-						color: #ffffff;
+						color: #ffd000;
 					}
 
 		#footer .inner {
@@ -3951,7 +4064,7 @@ input, select, textarea {
 			}
 
 		#footer .copyright {
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(0, 0, 0, 0.5);
 			margin: 0 auto 5.5rem auto;
 			max-width: 80rem;
 			text-align: center;
