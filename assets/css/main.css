@@ -2515,7 +2515,7 @@ span{
 			content: '';
 			height: 100%;
 			left: 0;
-			opacity: 0.65;
+			opacity: 0.15;
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -3144,6 +3144,15 @@ span{
 				-ms-align-self: -ms-stretch;
 				align-self: stretch;
 				margin: 0;
+				min-width: 30%;
+			}
+
+			.spotlights .spotlight .image.alt {
+				-moz-align-self: -moz-stretch;
+				-webkit-align-self: -webkit-stretch;
+				-ms-align-self: -ms-stretch;
+				align-self: stretch;
+				margin: 0;
 				min-width: 40%;
 			}
 
@@ -3155,7 +3164,7 @@ span{
 				}
 
 				.spotlights .spotlight .image img {
-					min-height: 100%;
+					min-height: 94%;
 					object-fit: cover;
 				}
 
