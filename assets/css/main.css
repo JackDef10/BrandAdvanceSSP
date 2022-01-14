@@ -72,6 +72,7 @@ span{
 	color:rgb(237 185 46);
 	font-weight: 300;
 	font-style: italic;
+	letter-spacing: 0.1em;
 }
 
 #white-h2{
@@ -2904,6 +2905,7 @@ span{
 			background: #ffffffd5;
 			position: relative;
 			padding-bottom: 0em;
+			padding-top:2em;
 		}
 
 			.wrapper.style1.top:before {
@@ -3177,6 +3179,18 @@ span{
 					margin-bottom: 0;
 				}
 
+				#green{
+					color: rgb(52, 182, 0);
+				
+				}
+				#amber{
+					color: rgb(255, 208, 0);
+				}
+
+				#red{
+					color:red;
+				}
+
 			@media screen and (max-width: 1280px) {
 
 				.spotlights .spotlight {
@@ -3369,7 +3383,6 @@ span{
 			position: relative;
 			margin: 0 auto;
 			display: inline;
-			top:0.5em;
 			}
 
 		#header .label {
@@ -3592,6 +3605,11 @@ span{
 					display: none;
 				}
 
+				#logo {
+					width:6em;
+					
+					}
+
 	}
 
 	@media screen and (max-width: 480px) {
@@ -3784,6 +3802,7 @@ span{
 
 		#banner .content p {
 			font-size: 1.25rem;
+			letter-spacing: 0.15em;
 		}
 
 	#banner .image-wrapper {
