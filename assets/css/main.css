@@ -191,6 +191,7 @@ span{
 
 	p {
 		margin: 0 0 2.75rem 0;
+		font-size: 1.15em;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -1807,6 +1808,87 @@ span{
 		padding: 1.5rem;
 	}
 
+	/*yellow box */
+
+	.box-yellow {
+		background: rgb(237 185 46);
+		color: white;
+		border-radius: 7px;
+		margin-bottom: 2.75rem;
+		padding: 1.5rem;
+		max-width: 55%;
+		min-height: 100px;
+	}
+
+	.box-yellow h4 {
+		color: white;
+		
+	}
+
+
+	.box-yellow > :last-child {
+		margin-bottom: 0;
+	}
+
+
+	.box-yellow.cta .content {
+			width: 65%;
+			padding-right: 4rem;
+		}
+
+		.box-yellow.cta .content > :last-child {
+				margin-bottom: 0;
+			}
+
+			.box-yellow.cta ul.actions {
+			width: 35%;
+			text-align: center;
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			.box-yellow.cta {
+				padding: 3rem;
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.box-yellow.cta {
+				-moz-flex-direction: column;
+				-webkit-flex-direction: column;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				padding: 3rem 2rem;
+			}
+
+			.box-yellow.cta .content {
+					width: 100%;
+					padding-right: 0;
+					text-align: center;
+				}
+
+				.box-yellow.cta .content > :last-child {
+						margin-bottom: 2.75rem;
+					}
+
+					.box-yellow.cta ul.actions {
+					width: 100%;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.box-yellow.cta {
+				padding: 2rem 1.5rem;
+				max-width: 100%;
+			}
+
+		}
+
+	/* sub box */
 	.sub-box {
 		background: transparent;
 		border-radius: 7px;
@@ -2508,6 +2590,7 @@ span{
 		display: inline-block;
 		position: relative;
 	}
+/*   ---------- overlay effect for images -------------
 
 		.image:after {
 			background: linear-gradient(45deg, #edb92e 20%, #5496ca 100%);
@@ -2519,6 +2602,8 @@ span{
 			top: 0;
 			width: 100%;
 		}
+
+		*/
 
 		.image img {
 			display: block;
