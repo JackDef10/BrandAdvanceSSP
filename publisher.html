@@ -193,21 +193,23 @@
 							</div>
 					</section>
 					
-		<!-- Footer -->
+			<!-- Footer -->
 			<div id="footer" class="wrapper">
 				<div class="inner">
 					<header>
 						<h2>Get in <span>touch</span></h2>
-						<p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus ferment. Pellentesque a diam sit amet amet dolor ullamcorper vehicula. Lorem ipsum dolor sit amet dolor sit amet consequat.</p>
 					</header>
 					<section class="contact-form">
-						<form method="post" action="#">
+						<form action="https://formsubmit.co/contact@brandadvance.co.uk" method="POST">
 							<div class="fields">
 								<div class="field half">
 									<input name="name" id="name" placeholder="Name" type="text" />
 								</div>
 								<div class="field half">
 									<input name="email" id="email" placeholder="Email" type="email" />
+								</div>
+								<div class="field">
+									<input type="tel" name="contact-number" id="contact-number" value="" placeholder="Enter your phone number" required />
 								</div>
 								<div class="field">
 									<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
@@ -218,6 +220,9 @@
 									</ul>
 								</div>
 							</div>
+							<input type="hidden" name="_subject" value="New submission!">
+							<input type="hidden" name="_captcha" value="false">
+							<input type="hidden" name="_template" value="table">
 						</form>
 					</section>
 					<section class="contact-info">
@@ -236,7 +241,7 @@
 						</div>
 						<div class="item">
 							<span class="icon solid alt fa-envelope"></span>
-							<a href="mailto:information@untitled.ext">contact@brandadvance.co.uk</a>
+							<a href="mailto:contact@brandadvance.co.uk">contact@brandadvance.co.uk</a>
 						</div>
 						<div class="item">
 							<span class="icon brands alt fa-twitter"></span>
@@ -251,8 +256,9 @@
 							<a href="#">linkedin.com/untitled</a>
 						</div>
 					</section>
+					
 					<p class="copyright">
-						&copy; BrandAdvance. All rights reserved. Lorem ipsum dolor sit amet.
+						&copy; BrandAdvanceSSP. All rights reserved.
 					</p>
 				</div>
 			</div>

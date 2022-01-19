@@ -191,7 +191,8 @@ span{
 
 	p {
 		margin: 0 0 2.75rem 0;
-		font-size: 1.15em;
+		font-size: 1.3em;
+		letter-spacing: 0.05em;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -3219,7 +3220,7 @@ span{
 					-6px -6px 10px -1px rgba(255, 255, 255, 0.6);
 			max-height: 30rem;
 			overflow: hidden;
-			font-size: 1.25em;
+			font-size: 1em;
 			color: rgb(0, 0, 0);
 		}
 
