@@ -3553,6 +3553,10 @@ span{
 				margin-top: .35rem;
 				margin-left: -6em;
 			}
+			.dropotron.level-3 {
+				margin-top: .35rem;
+				margin-left: 6.75em;
+			}
 
 				.dropotron.level-0:before {
 					-moz-transform: rotate(45deg);
